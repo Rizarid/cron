@@ -1,3 +1,7 @@
+body {
+  place-items: flex-start;
+}
+
 #root {
   width: 100%;
 }
@@ -5,6 +9,7 @@
   width: 100%;
   padding: 0 60px;
   background: #131212;
+  box-sizing: border-box;
 }
 
 .logo {
