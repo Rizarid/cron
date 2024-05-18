@@ -1,15 +1,21 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { $cases, getCasesFx } from './store/casesStore/casesStore'
+
 import './App.css'
-import { getCases } from './api/getCases'
+import { useUnit } from 'effector-react'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [cases, getCases] = useUnit([$cases, getCasesFx]);
 
   useEffect(() => {
     getCases();
-  })
+  }, [getCases]);
+
+  console.log(cases);
 
   return (
     <>
