@@ -1,0 +1,24 @@
+.CasesFilter {
+  width: 25%;
+}
+
+.FilterTitle {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  //font-family: GothamPro-Bold;
+}
+
+.FilterContainer {
+  margin-top: 61px;
+  display: inline-flex;
+  flex-direction: column;
+  color:#fff
+
+}
+
+.Separator {
+  width: 100%;
+  padding: 13px;
+  border-bottom: 2px solid #fff;
+}
