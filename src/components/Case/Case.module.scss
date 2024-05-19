@@ -1,0 +1,79 @@
+.Case {
+  width: 655px;
+  max-height: 480px;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+
+  &:hover {
+    & .Image {
+      opacity: 0;
+    }
+    & .Description {
+      opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 1670px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1470px) {
+    position: relative;
+  }
+}
+
+.Image {
+  max-width: 100%;
+  max-height: 100%;
+  justify-self: center;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.Description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 35px 35px;
+  box-sizing: border-box;
+  opacity: 0;
+
+  @media (max-width: 1470px) {
+    padding: 15px 15px;
+  }
+}
+
+.Title {
+  color: #fff;
+  font-size: 32px;
+  font-family: GothamPro-Bold;
+
+  &.Dark {
+    color: #131212
+  }
+}
+
+.Filters {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 30px;
+
+  &.Dark {
+    color: #131212
+  }
+}

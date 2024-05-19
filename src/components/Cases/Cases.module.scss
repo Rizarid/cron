@@ -1,0 +1,24 @@
+.Cases {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.CaseColumn {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 50%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+  }
+}

@@ -1,9 +1,20 @@
-import { createEffect, createEvent, restore } from "effector";
+import { createEffect, restore, combine } from "effector";
+
 import { getCases } from "../../api/getCases";
+import { $filters } from "../filtersStore/filtersStore";
 
 export const getCasesFx = createEffect(getCases);
 export const $cases = restore(getCasesFx, []);
 
-export const addFilterEvent = createEvent<string>();
-export const deleteFilterEvent = createEvent<string>();
+export const $filteredCases = combine(
+  $cases, 
+  $filters, 
+  (cases, filters) => {
+    if (!filters.length) return cases;
+
+    return cases.filter(item => {
+      return filters.some(filter => item.Filters.includes(filter));
+    })
+  }
+)
 
