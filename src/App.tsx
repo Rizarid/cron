@@ -1,12 +1,15 @@
 import { useEffect } from 'react'
+import { useUnit } from 'effector-react'
+import { Route, Routes } from 'react-router-dom'
+
 import { $filteredCases, getCasesFx } from './store/casesStore/casesStore'
+import { Footer } from './components/Footer/Footer'
+import { CasesPage } from './Pages/CasesPage'
 
 import './App.scss'
-import { useUnit } from 'effector-react'
-import { CasesFilters } from './components/CasesFilters/CasesFilters'
-import { CaseTitle } from './components/CaseTitle/CaseTitle'
-import { Cases } from './components/Cases/Cases'
-import { Footer } from './components/Footer/Footer'
+import { EmptyPage } from './Pages/EmptyPage'
+import { Header } from './components/Header/Header'
+
 
 function App() {
   const [filteredCases, getCases] = useUnit([$filteredCases, getCasesFx]);
@@ -19,12 +22,13 @@ function App() {
 
   return (
     <>
-      <header></header>
-      <main className="main">
-        <CaseTitle />
-        <CasesFilters />
-        <Cases />
-      </main>
+      <Header />
+      <Routes>
+        <Route path="/" element={<CasesPage />} />
+        <Route path="/company" element={<EmptyPage />} />
+        <Route path="/services" element={<EmptyPage />} />
+        <Route path="/contacts" element={<EmptyPage />} />
+      </Routes>
       <Footer />
     </>
   )

@@ -1,0 +1,38 @@
+.BurgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #242424;
+}
+
+.CloseButton {
+  position: fixed;
+  top: 9px;
+  right: 40px ;
+}
+
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.MenuItem {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+
+  &:hover {
+    color: #fb6542;
+  }
+}
+
+.Active {
+  color: #fb6542;
+}

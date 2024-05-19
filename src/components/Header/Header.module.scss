@@ -1,0 +1,86 @@
+.Header {
+  height: 120px;
+  width: calc(100% - 120px);
+  padding: 0 60px;
+  top: 0;
+  position: fixed;
+  background-color: rgba(19, 18, 18, .8);
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  z-index: 2;
+
+  @media (max-width: 850px) {
+    height: 60px;
+    gap: 30px;
+    padding: 0 40px;
+    width: calc(100% - 80px);
+  }
+
+  @media (max-width: 600px) {
+    justify-content: space-between;
+  }
+}
+
+.Placeholder {
+  height: 120px;
+  width: 100%;
+}
+
+.MainMenu {
+  display: flex;
+  gap: 32px;
+
+  @media (max-width: 850px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.MenuItem {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+
+  @media (max-width: 850px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: #fb6542;
+  }
+}
+
+.Active {
+  color: #fb6542;
+}
+
+.BurgerContainer {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+.RhombContainer {
+  height: 145px;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.Rhomb {
+  margin-left: 60%;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  transform: rotate(15deg);
+  border: 4px solid #fff;
+}
