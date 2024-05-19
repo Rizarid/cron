@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "GothamPro";
+  src: url("assets/fonts/gothampro.woff") format("woff"),
+  url("assets/fonts/gothampro.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("assets/fonts/gothampro-bold.woff") format("woff"),
+  url("assets/fonts/gothampro-bold.woff") format("truetype"),
+}
+
+@font-face {
+  font-family: "GothamPro-Black";
+  src: url("assets/fonts/gothampro-black.woff") format("woff"),
+  url("assets/fonts/gothampro-black.woff") format("truetype"),
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: GothamPro, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
