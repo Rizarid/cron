@@ -17,7 +17,7 @@ export const CaseFilter: FC<Props> = ({title, filters}) => {
       <div className={styles.Separator}></div>
       <div className={styles.FilterContainer}>
         {filters.map(filter => (
-          <CaseFilterItem filter={filter} />
+          <CaseFilterItem filter={filter} key={filter} />
         ))}
       </div>
     </div>
