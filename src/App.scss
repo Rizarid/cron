@@ -1,3 +1,8 @@
+body {
+  place-items: flex-start;
+  background-color: #131212;
+}
+
 #root {
   width: 100%;
 }
@@ -5,6 +10,15 @@
   width: 100%;
   padding: 0 60px;
   background: #131212;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
 }
 
 .logo {

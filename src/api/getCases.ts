@@ -5,10 +5,20 @@ interface Filter {
   Name: string
 }
 
-interface CaseResponse {
+export interface CaseResponse {
   CaseColor: string;
   FeaturesTitle: string;
   Filters: Filter[];
+  FriendlyURL: string;
+  Id: string;
+  Image: string;
+  Title: string;
+}
+
+export interface CaseResult  {
+  CaseColor: string;
+  FeaturesTitle: string;
+  Filters: string[];
   FriendlyURL: string;
   Id: string;
   Image: string;
@@ -25,11 +35,11 @@ export const getCases = async () => {
     const result = await axios.get<Response>('https://services.it-cron.ru/api/cases', {
       headers: {
         Accept: 'text/plain',
-        AcceptLanguage: 'ru'
+        'Accept-Language': 'ru',
       }
     })
 
-    const cases = result.data.Data.map((item) => {
+    const cases: CaseResult[] = result.data.Data.map((item) => {
       const Filters = item.Filters.map(filter => filter.Name);  
       return {...item, Filters}
     })

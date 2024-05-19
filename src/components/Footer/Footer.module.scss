@@ -1,0 +1,210 @@
+.Footer {
+  padding: 100px;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    padding: 100px 15px 15px;
+  }
+}
+
+.EmailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContactsContainer {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 1470px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.FooterTitle {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  font-family: GothamPro-Bold;
+
+  @media (max-width: 600) {
+    font-size: 16px;
+  }
+}
+
+.Separator {
+  width: 2px;
+  height: 60px;
+  opacity: .5;
+  background-color: #fff;
+  margin-top: 60px;
+
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+}
+
+.Email {
+  font-size: 96px;
+  color: #fff;
+  margin-top: 60px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: 1470px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+}
+
+.Request {
+  width: 300px;
+  height: 300px;
+  background-color: #fb6542;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media (max-width: 1670px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: 600px) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.RequestText {
+  color: #fff;
+  font-size: 36px;
+  font-family: GothamPro-Bold;
+  text-align: center;
+
+  @media (max-width: 1670px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.Address {
+  width: 400px;
+
+  @media (max-width: 1470px) {
+    display: none;
+  }
+}
+
+.AddressMobile {
+  display: none;
+
+  @media (max-width: 1470px) {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+  }
+}
+
+.City {
+  font-family: GothamPro-Bold;
+  font-size: 24px;
+  color: #fff;
+
+  @media (max-width: 1470px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.Street {
+  font-size: 24px;
+  margin-top: 10px;
+  line-height: 33.6px;
+  color: #fff;
+
+  @media (max-width: 1470px) {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.Phone {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #fb6542;
+  font-size: 24px;
+
+  @media (max-width: 1470px) {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.TelegramContainer {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1470px) {
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    width: unset;
+  }
+}
+
+.TelegramTitle {
+  color: #fff;
+  text-align: right;
+  font-size: 32px;
+
+  @media (max-width: 1470px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.TelegramImage {
+  margin-top: 16px;
+}
+

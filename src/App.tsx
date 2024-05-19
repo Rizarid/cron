@@ -1,25 +1,31 @@
 import { useEffect } from 'react'
-import { $cases, getCasesFx } from './store/casesStore/casesStore'
+import { $filteredCases, getCasesFx } from './store/casesStore/casesStore'
 
-import './App.css'
+import './App.scss'
 import { useUnit } from 'effector-react'
 import { CasesFilters } from './components/CasesFilters/CasesFilters'
+import { CaseTitle } from './components/CaseTitle/CaseTitle'
+import { Cases } from './components/Cases/Cases'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
-  const [cases, getCases] = useUnit([$cases, getCasesFx]);
+  const [filteredCases, getCases] = useUnit([$filteredCases, getCasesFx]);
 
   useEffect(() => {
     getCases();
   }, [getCases]);
 
-  console.log(cases);
+  console.log(filteredCases);
 
   return (
     <>
       <header></header>
       <main className="main">
+        <CaseTitle />
         <CasesFilters />
+        <Cases />
       </main>
+      <Footer />
     </>
   )
 }

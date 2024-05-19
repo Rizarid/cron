@@ -1,0 +1,135 @@
+.CaseTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.Title {
+  font-family: GothamPro-Black;
+  font-size: 150px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #fff;
+
+  @media (max-width: 1470px) {
+    font-size: 120px;
+  }
+
+  @media (max-width: 1150px) {
+    align-self: flex-start;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 90px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 70px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 38px;
+  }
+}
+
+.FiltersSwitcher {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 360px;
+
+  @media (max-width: 1150px) {
+    align-self: flex-end;
+  }
+}
+
+.Cleaner {
+  font-size: 24px;
+  font-family: GothamPro-Bold;
+  color: #fb6542;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.LeftSeparator {
+  height: 0;
+  width: 35px;
+  border: 1px solid #fb6542;
+  margin-right: 20px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.Rhomb {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  margin-right: 32px;
+  cursor: pointer;
+  transition: background-color border .3s;
+
+  @media (max-width: 600px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.FiltersOpenRhomb {
+  background-color: #fff; 
+}
+
+.FilteredRhomb {
+  border: 3px solid #fb6542;
+}
+
+.RightSeparator {
+  width: 80px;
+  height: 0;
+  border: 1px solid #fff; 
+  margin-right: 32px;
+  transition: width .3s, margin-right 0.3s, border .3s;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.RightSeparatorHidden {
+  width: 0;
+  margin-right: 0px;
+  border: 0 solid #fff
+}
+
+.Switcher {
+  color: #fff;
+  letter-spacing: .02em;
+  font-size: 48px;
+  cursor: pointer;
+
+  @media (max-width: 1470px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.FilterOpenSwitcher {
+  color: #fb6542
+}

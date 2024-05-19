@@ -1,0 +1,89 @@
+.Case {
+  width: 655px;
+  max-height: 480px;
+  min-height: 420px;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+
+  @media (max-width: 768px) {
+    min-height: unset;
+  }
+
+  &:hover {
+    & .Image {
+      opacity: 0;
+    }
+    & .Description {
+      opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 1670px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1470px) {
+    position: relative;
+  }
+}
+
+.Image {
+  max-width: 100%;
+  max-height: 480px;
+  justify-self: center;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.Description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 35px 35px;
+  box-sizing: border-box;
+  opacity: 0;
+
+  @media (max-width: 1470px) {
+    padding: 15px 15px;
+  }
+}
+
+.Title {
+  color: #fff;
+  font-size: 32px;
+  font-family: GothamPro-Bold;
+
+  &.Dark {
+    color: #131212
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.Filters {
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 30px;
+
+  &.Dark {
+    color: #131212
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}

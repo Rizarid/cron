@@ -1,24 +1,40 @@
 .CasesFilter {
   width: 25%;
+
+  @media (max-width: 1350px) {
+    width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .FilterTitle {
   color: #fff;
   font-size: 24px;
   margin: 0;
-  //font-family: GothamPro-Bold;
+  font-family: GothamPro-Bold;
 }
 
 .FilterContainer {
   margin-top: 61px;
   display: inline-flex;
   flex-direction: column;
-  color:#fff
+  color:#fff;
 
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
 }
 
 .Separator {
   width: 100%;
   padding: 13px;
   border-bottom: 2px solid #fff;
+
+  @media (max-width: 600px) {
+    padding: 6px;
+    border-bottom: 1px solid #fff;
+  }
 }
