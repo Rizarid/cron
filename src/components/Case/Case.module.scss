@@ -1,6 +1,7 @@
 .Case {
   width: 655px;
   max-height: 480px;
+  min-height: 420px;
   height: 100%;
   cursor: pointer;
   border-radius: 20px;
@@ -8,6 +9,10 @@
   justify-content: center;
   align-items: flex-end;
   position: relative;
+
+  @media (max-width: 768px) {
+    min-height: unset;
+  }
 
   &:hover {
     & .Image {
@@ -30,7 +35,7 @@
 
 .Image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 480px;
   justify-self: center;
   object-fit: contain;
   opacity: 1;
@@ -47,7 +52,6 @@
   padding: 0 35px 35px;
   box-sizing: border-box;
   opacity: 0;
-  user-select: none;
 
   @media (max-width: 1470px) {
     padding: 15px 15px;
@@ -62,6 +66,10 @@
   &.Dark {
     color: #131212
   }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .Filters {
@@ -72,5 +80,10 @@
 
   &.Dark {
     color: #131212
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+    line-height: 14.4px;
   }
 }

@@ -11,6 +11,14 @@ body {
   padding: 0 60px;
   background: #131212;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
 }
 
 .logo {

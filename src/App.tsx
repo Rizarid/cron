@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { $filteredCases, getCasesFx } from './store/casesStore/casesStore'
 
-import './App.css'
+import './App.scss'
 import { useUnit } from 'effector-react'
 import { CasesFilters } from './components/CasesFilters/CasesFilters'
 import { CaseTitle } from './components/CaseTitle/CaseTitle'

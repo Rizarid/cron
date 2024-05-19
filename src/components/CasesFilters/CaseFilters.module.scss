@@ -30,6 +30,11 @@
   justify-content: space-between;
   margin-top: 45px;
   padding-right: 100px;
+  gap: 50px;
+
+  @media (max-width: 600px) {
+    padding-right: 0;
+  }
 }
 
 .Rhomb{
@@ -39,15 +44,31 @@
   border: 4px solid #fff;
   border-radius: 5px;
   transform: rotate(45deg);
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .CaseFiltersContainer {
-  width: 92%;
+  flex: 1 1;
   min-height: 450px;
   animation: CasesFiltersOpen .3s;
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  @media (max-width: 1350px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+    flex: unset;
+    width: 85%;
+    animation: unset;
+  }
 }
 
 .CaseFiltersContainerClose {

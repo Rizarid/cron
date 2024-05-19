@@ -1,6 +1,10 @@
 .Footer {
   padding: 100px;
   box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    padding: 100px 15px 15px;
+  }
 }
 
 .EmailContainer {
@@ -43,7 +47,7 @@
   background-color: #fff;
   margin-top: 60px;
 
-  @media (max-width: 600) {
+  @media (max-width: 600px) {
     margin-top: 30px;
   }
 }
@@ -60,11 +64,11 @@
     font-size: 80px;
   }
 
-  @media (max-width: 768) {
+  @media (max-width: 768px) {
     font-size: 60px;
   }
 
-  @media (max-width: 600) {
+  @media (max-width: 600px) {
     font-size: 32px;
     margin-top: 30px;
   }
@@ -179,6 +183,10 @@
   @media (max-width: 1470px) {
     margin-top: 50px;
     align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    width: unset;
   }
 }
 
