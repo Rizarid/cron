@@ -1,13 +1,7 @@
 .CaseTitle {
   width: 100%;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -moz-box-align: center;
   align-items: center;
 }
 
@@ -20,14 +14,8 @@
 }
 
 .FiltersSwitcher {
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-justify-content: flex-end;
-  -moz-box-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -moz-box-align: center;
   align-items: center;
   min-width: 360px;
 }
@@ -53,7 +41,6 @@
   height: 25px;
   border: 3px solid #fff;
   border-radius: 3px;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-right: 32px;
   cursor: pointer;

@@ -4,11 +4,7 @@
   height: 100%;
   cursor: pointer;
   border-radius: 20px;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-align-items: flex-end;
-  -moz-box-align: end;
   justify-content: center;
   align-items: flex-end;
   position: relative;
@@ -51,6 +47,7 @@
   padding: 0 35px 35px;
   box-sizing: border-box;
   opacity: 0;
+  user-select: none;
 
   @media (max-width: 1470px) {
     padding: 15px 15px;
