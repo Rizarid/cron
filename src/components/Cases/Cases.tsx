@@ -1,13 +1,17 @@
 import { useUnit } from "effector-react";
-import { FC, memo } from "react";
+import { FC, memo, useEffect } from "react";
 
-import { $filteredCases } from "../../store/casesStore/casesStore";
+import { $filteredCases, getCasesFx } from "../../store/casesStore/casesStore";
 import { Case } from "../Case/Case";
 
 import styles from './Cases.module.scss';
 
 export const Cases: FC = memo(() => {
-  const [filteredCases] = useUnit([$filteredCases]);
+  const [filteredCases, getCases] = useUnit([$filteredCases, getCasesFx]); 
+  
+  useEffect(() => {
+    getCases();
+  }, [getCases]);
 
   const kolCases = filteredCases.length;
 

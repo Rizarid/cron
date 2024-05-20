@@ -1,8 +1,10 @@
 import { FC, memo } from "react";
+import { useUnit } from "effector-react";
+
 import { Filters } from "../../store/filtersStore/interfaces";
 import { $filters, switchFilterEvent } from "../../store/filtersStore/filtersStore";
+
 import styles from './CaseFilterItem.module.scss'
-import { useUnit } from "effector-react";
 
 interface Props {
   filter: Filters

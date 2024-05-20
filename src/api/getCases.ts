@@ -1,34 +1,5 @@
 import axios from "axios";
-
-interface Filter {
-  Id: string;
-  Name: string
-}
-
-export interface CaseResponse {
-  CaseColor: string;
-  FeaturesTitle: string;
-  Filters: Filter[];
-  FriendlyURL: string;
-  Id: string;
-  Image: string;
-  Title: string;
-}
-
-export interface CaseResult  {
-  CaseColor: string;
-  FeaturesTitle: string;
-  Filters: string[];
-  FriendlyURL: string;
-  Id: string;
-  Image: string;
-  Title: string;
-}
-
-interface Response {
-  Error: string | null
-  Data:CaseResponse[]
-}
+import { CaseResult, Response } from "./interfaces";
 
 export const getCases = async () => {
   try {

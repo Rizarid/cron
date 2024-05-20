@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { Filters } from "../../store/filtersStore/interfaces";
 import { CaseFilterItem } from "../CaseFilterItem/CaseFilterItem";
@@ -10,7 +10,7 @@ interface Props {
   filters: Filters[]
 }
 
-export const CaseFilter: FC<Props> = ({title, filters}) => {
+export const CaseFilter: FC<Props> = memo(({title, filters}) => {
   return (
     <div className={styles.CasesFilter}>
       <h3 className={styles.FilterTitle}>{title}</h3>
@@ -22,4 +22,4 @@ export const CaseFilter: FC<Props> = ({title, filters}) => {
       </div>
     </div>
   )
-}
+})

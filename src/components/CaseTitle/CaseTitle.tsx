@@ -1,9 +1,11 @@
 import { useUnit } from "effector-react";
-import { FC } from "react";
+import { FC, memo } from "react";
+
 import { $filters, $filtersIsOpen, cleanFiltersEvent, switchFiltersEvent } from "../../store/filtersStore/filtersStore";
+
 import styled from './CaseTitle.module.scss';
 
-export const CaseTitle: FC = () => {
+export const CaseTitle: FC = memo(() => {
   const [filtersIsOpen, filters, switchFilters, cleanFilters] = useUnit([$filtersIsOpen, $filters, switchFiltersEvent, cleanFiltersEvent]);
 
   return (
@@ -18,4 +20,4 @@ export const CaseTitle: FC = () => {
       </div>
     </div>
   )
-} 
+} )

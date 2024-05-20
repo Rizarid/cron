@@ -1,12 +1,13 @@
-import { FC } from "react"
+import { FC, memo } from "react"
+import { useUnit } from "effector-react";
+
 import { languageFilters, platformFilters, sectoralFilters, servicesFilters } from "./filters"
 import { CaseFilter } from "../CaseFilter/CaseFilter"
-
-import styles from './CaseFilters.module.scss';
-import { useUnit } from "effector-react";
 import { $filtersIsOpen } from "../../store/filtersStore/filtersStore";
 
-export const CasesFilters: FC = () => {
+import styles from './CaseFilters.module.scss';
+
+export const CasesFilters: FC = memo(() => {
   const [filtersIsOpen] = useUnit([$filtersIsOpen])
   return (
     <div className={styles.CasesFilters}>
@@ -35,4 +36,4 @@ export const CasesFilters: FC = () => {
       </div>
     </div>
   )
-}
+})
