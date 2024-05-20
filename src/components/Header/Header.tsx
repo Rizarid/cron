@@ -1,22 +1,13 @@
-import { FC, memo, useCallback } from "react";
+import { FC, memo } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from '../../assets/logo.svg'
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 
 import styles from './Header.module.scss'
-
-type NavLinkRenderProps = {
-  isActive: boolean;
-  isPending: boolean;
-  isTransitioning: boolean;
-};
+import { MainMenu } from "../MainMenu/MainMenu";
 
 export const Header: FC = memo(() => {
-  const getClassName = useCallback((props: NavLinkRenderProps) => 
-    `${styles.MenuItem} ${props.isActive && styles.Active}`, 
-  [])
-
   return (
     <>
       <div className={styles.Placeholder}></div>
@@ -25,11 +16,8 @@ export const Header: FC = memo(() => {
           <img src={logo} />
         </NavLink>
 
-        <div className={styles.MainMenu}>
-          <NavLink to={'/'} className={getClassName}>Кейсы</NavLink>
-          <NavLink to={'/company'} className={getClassName}>Компания</NavLink>
-          <NavLink to={'/services'} className={getClassName}>Услуги</NavLink>
-          <NavLink to={'/contacts'} className={getClassName}>Контакты</NavLink>
+        <div className={styles.MenuContainer}>
+          <MainMenu />
         </div>
 
         <div className={styles.BurgerContainer}>
