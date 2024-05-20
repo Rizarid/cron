@@ -60,11 +60,19 @@
 
 .Title {
   color: #fff;
-  font-size: 32px;
+  font-size: 52px;
   font-family: GothamPro-Bold;
 
   &.Dark {
     color: #131212
+  }
+
+  @media (max-width: 1670px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 1470px) {
+    font-size: 32px;
   }
 
   @media (max-width: 600px) {
@@ -78,12 +86,17 @@
   line-height: 24px;
   margin-top: 30px;
 
-  &.Dark {
-    color: #131212
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 19.2px;
   }
 
   @media (max-width: 600px) {
     font-size: 12px;
     line-height: 14.4px;
   }
+}
+
+.Dark {
+  color: #131212
 }
