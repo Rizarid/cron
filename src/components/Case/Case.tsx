@@ -10,6 +10,7 @@ interface Props {
 }
 
 const WHITE = '#FFFFFF';
+const CONTRAST_RATIO_THRESHOLD = 1.5;
 
 export const Case: FC<Props> = memo(({caseProp}) => {
   const {CaseColor = WHITE, FriendlyURL, Image, Title, Filters} = caseProp;
@@ -17,7 +18,7 @@ export const Case: FC<Props> = memo(({caseProp}) => {
   const filtersList = Filters?.join(', ') || '';
 
   const contrastRatio = getContrastRatio(CaseColor, WHITE);
-  const isLightBackground = contrastRatio < 1.5;
+  const isLightBackground = contrastRatio < CONTRAST_RATIO_THRESHOLD;
 
   return (
     <a href={FriendlyURL}>
