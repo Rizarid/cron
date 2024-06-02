@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CaseResult, Response } from "./interfaces";
+import { CaseResult, Hex, Response } from "./interfaces";
 
 const API_URL = 'https://services.it-cron.ru/api';
 
@@ -14,7 +14,7 @@ export const getCases = async () => {
 
     const cases: CaseResult[] = result.data.Data.map((item) => {
       const Filters = item?.Filters?.map(filter => filter.Name) || undefined;
-      const CaseColor = item?.CaseColor ? `#${item?.CaseColor}` : undefined 
+      const CaseColor = item?.CaseColor ? `#${item.CaseColor}` as Hex : undefined 
       return {...item, Filters, CaseColor}
     })
 

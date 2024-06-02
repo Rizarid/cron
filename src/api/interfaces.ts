@@ -14,7 +14,7 @@ export interface CaseResponse {
 }
 
 export interface CaseResult  {
-  CaseColor?: string;
+  CaseColor?: Hex;
   FeaturesTitle?: string;
   Filters?: string[];
   FriendlyURL?: string;
@@ -27,3 +27,7 @@ export interface Response {
   Error: string | null
   Data:CaseResponse[]
 }
+
+export type Hex = `#${string}`;
+export type RGB = [number, number, number]
+export type Color = RGB | Hex;
