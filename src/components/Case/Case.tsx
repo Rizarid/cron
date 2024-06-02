@@ -13,7 +13,7 @@ const WHITE = 'FFFFFF';
 export const Case: FC<Props> = memo(({caseProp}) => {
   const {CaseColor, FriendlyURL, Image, Title, Filters} = caseProp;
 
-  const filtersList = Filters.join(', ');
+  const filtersList = Filters?.join(', ') || '';
 
   const isWhiteBackground = CaseColor === WHITE;
 

@@ -13,7 +13,7 @@ export const $filteredCases = combine(
     if (!filters.length) return cases;
 
     return cases.filter(item => {
-      return filters.some(filter => item.Filters.includes(filter));
+      return filters.some(filter => item?.Filters?.includes(filter));
     })
   }
 )

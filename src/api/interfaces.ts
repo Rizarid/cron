@@ -4,23 +4,23 @@ interface Filter {
 }
 
 export interface CaseResponse {
-  CaseColor: string;
-  FeaturesTitle: string;
-  Filters: Filter[];
-  FriendlyURL: string;
-  Id: string;
-  Image: string;
-  Title: string;
+  CaseColor?: string;
+  FeaturesTitle?: string;
+  Filters?: Filter[];
+  FriendlyURL?: string;
+  Id?: string;
+  Image?: string;
+  Title?: string;
 }
 
 export interface CaseResult  {
-  CaseColor: string;
-  FeaturesTitle: string;
-  Filters: string[];
-  FriendlyURL: string;
-  Id: string;
-  Image: string;
-  Title: string;
+  CaseColor?: string;
+  FeaturesTitle?: string;
+  Filters?: string[];
+  FriendlyURL?: string;
+  Id?: string;
+  Image?: string;
+  Title?: string;
 }
 
 export interface Response {

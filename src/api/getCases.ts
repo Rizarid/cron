@@ -13,8 +13,9 @@ export const getCases = async () => {
     })
 
     const cases: CaseResult[] = result.data.Data.map((item) => {
-      const Filters = item.Filters.map(filter => filter.Name);  
-      return {...item, Filters}
+      const Filters = item?.Filters?.map(filter => filter.Name) || undefined;
+      const CaseColor = item?.CaseColor ? `#${item?.CaseColor}` : undefined 
+      return {...item, Filters, CaseColor}
     })
 
     return cases
